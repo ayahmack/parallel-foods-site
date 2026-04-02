@@ -168,27 +168,22 @@
     .brand-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
     .brand-card {
       background: var(--green-dark); padding: 2rem; position: relative;
-      overflow: hidden; cursor: pointer; transition: transform 0.3s ease;
+      cursor: pointer; transition: transform 0.3s ease;
     }
     .brand-card:hover { transform: translateY(-4px); }
     .brand-card-label {
       font-family: 'Jost', sans-serif; font-size: 0.6rem; letter-spacing: 0.3em;
-      text-transform: uppercase; color: var(--silver-light); margin-bottom: 0.75rem;
-      float: none; font-weight: 400;
+      text-transform: uppercase; color: #ffffff; margin-bottom: 0.75rem; font-weight: 400;
     }
     .brand-card-name {
       font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 600;
-      color: var(--cream); margin-bottom: 0.75rem; float: none; line-height: 1.4;
+      color: #ffffff; margin-bottom: 0.75rem; line-height: 1.4;
     }
     .brand-card-desc {
       font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 300;
-      line-height: 1.7; color: rgba(245,242,236,0.95); float: none;
+      line-height: 1.7; color: #ffffff;
     }
-    .brand-card-arrow {
-      position: absolute; bottom: 1.5rem; right: 1.5rem;
-      color: var(--silver); font-size: 1rem; transition: transform 0.3s;
-    }
-    .brand-card:hover .brand-card-arrow { transform: translate(3px, -3px); color: var(--cream); }
+    .brand-card-arrow { display: none; }
 
     /* CONTACT */
     #contact { padding: 8rem 4rem; background: var(--cream-dark); }
