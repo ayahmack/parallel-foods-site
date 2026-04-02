@@ -130,10 +130,7 @@
     }
 
     .values-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M40 0C17.9 0 0 17.9 0 40s17.9 40 40 40 40-17.9 40-40S62.1 0 40 0zm0 70C23.4 70 10 56.6 10 40S23.4 10 40 10s30 13.4 30 30-13.4 30-30 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      display: none;
     }
 
     .values-inner {
@@ -187,10 +184,10 @@
 
     .value-text {
       font-family: 'Jost', sans-serif;
-      font-weight: 200;
+      font-weight: 300;
       font-size: 0.88rem;
       line-height: 1.9;
-      color: rgba(245,242,236,0.6);
+      color: rgba(245,242,236,0.85);
     }
 
     /* CLOSING */
@@ -313,7 +310,7 @@
 
   <div class="values-section">
     <div class="values-inner">
-      <p class="values-intro reveal">Our philosophy is guided by three principles.</p>
+      <p class="values-intro reveal">Our philosophy is guided by three principles:</p>
       <div class="values-grid">
         <div class="value-item reveal">
           <p class="value-num">01</p>
