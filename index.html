@@ -267,8 +267,8 @@
     @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal { opacity: 1; transform: none; }
+    .reveal.visible { opacity: 1; transform: none; }
 
     /* RESPONSIVE */
     @media (max-width: 900px) {
@@ -322,15 +322,15 @@
   <div class="brand-strip">
     <div class="brand-strip-inner">
       <span class="brand-strip-item"><strong>Parallel Foods, INC.</strong></span>
-      <span class="brand-strip-item">· &nbsp; &#x202A;(ال)&#x202C; SOUQ Drinks</span>
+      <span class="brand-strip-item">· &nbsp; (<span dir="rtl">ال</span>) SOUQ Drinks</span>
       <span class="brand-strip-item">· &nbsp; <strong>Gather. Honor. Discover.</strong></span>
       <span class="brand-strip-item">· &nbsp; MENA-Inspired Food</span>
       <span class="brand-strip-item">· &nbsp; <strong>Parallel Foods, INC.</strong></span>
-      <span class="brand-strip-item">· &nbsp; &#x202A;(ال)&#x202C; SOUQ Drinks</span>
+      <span class="brand-strip-item">· &nbsp; (<span dir="rtl">ال</span>) SOUQ Drinks</span>
       <span class="brand-strip-item">· &nbsp; <strong>Gather. Honor. Discover.</strong></span>
       <span class="brand-strip-item">· &nbsp; MENA-Inspired Food</span>
       <span class="brand-strip-item">· &nbsp; <strong>Parallel Foods, INC.</strong></span>
-      <span class="brand-strip-item">· &nbsp; &#x202A;(ال)&#x202C; SOUQ Drinks</span>
+      <span class="brand-strip-item">· &nbsp; (<span dir="rtl">ال</span>) SOUQ Drinks</span>
       <span class="brand-strip-item">· &nbsp; <strong>Gather. Honor. Discover.</strong></span>
       <span class="brand-strip-item">· &nbsp; MENA-Inspired Food</span>
     </div>
@@ -338,12 +338,12 @@
 
   <section id="about">
     <div class="about-grid">
-      <div class="about-left reveal">
+      <div class="about-left">
         <p class="about-label">About Us</p>
         <h2 class="about-heading">Where <em>Tradition</em><br/>Meets the Table</h2>
         <div class="about-left-line"></div>
       </div>
-      <div class="about-body reveal">
+      <div class="about-body">
         <p>
           Parallel Foods, Inc. creates food and beverages inspired by the culinary traditions of the Middle East, North Africa, and South Asia. Our work is rooted in regions where flavor is layered, hospitality is instinctive, and food carries meaning beyond the plate.
         </p>
@@ -353,10 +353,10 @@
         <p class="small">
           Parallel Foods is not just about what you consume. It is about what you share, what you learn, and what stays with you after.
         </p>
-        <div class="brand-cards reveal">
+        <div class="brand-cards">
           <div class="brand-card">
             <p class="brand-card-label">Flagship Brand</p>
-            <p class="brand-card-name">&#x202A;(ال)&#x202C; SOUQ Drinks</p>
+            <p class="brand-card-name">(<span dir="rtl">ال</span>) SOUQ Drinks</p>
             <p class="brand-card-desc">MENA-inspired food and beverages. Royal Mint · Dark Hibiscus · Golden Saffron.</p>
             <span class="brand-card-arrow">↗</span>
           </div>
@@ -373,7 +373,7 @@
 
   <section id="contact">
     <div class="contact-inner">
-      <div class="contact-left reveal">
+      <div class="contact-left">
         <p class="about-label">Get in Touch</p>
         <h2 class="contact-heading">Let's Build<br/><em>Something</em><br/>Together</h2>
         <div style="margin-top: 3rem; display: flex; flex-direction: column; gap: 1.5rem;">
@@ -391,7 +391,7 @@
           </div>
         </div>
       </div>
-      <div class="reveal">
+      <div>
         <form class="contact-form" action="https://formspree.io/f/mwvwnejy" method="POST">
           <div class="form-row">
             <div class="form-group">
@@ -444,17 +444,9 @@
     <p class="footer-right">parallelfoods.com<br/>Los Angeles, CA</p>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 50);
     });
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 80);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { 
+  </script>
