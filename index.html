@@ -157,7 +157,7 @@
       font-family: 'Cormorant Garamond', serif; font-size: 1.2rem;
       font-weight: 400; line-height: 1.85; color: var(--ink); margin-bottom: 1.5rem;
     }
-    .about-body p:first-child::first-letter {
+    .about-body > p:first-child::first-letter {
       font-family: 'Cinzel', serif; font-size: 3.5rem; font-weight: 700;
       color: var(--green); float: left; line-height: 0.8; margin: 0.1em 0.1em 0 0;
     }
@@ -174,14 +174,15 @@
     .brand-card-label {
       font-family: 'Jost', sans-serif; font-size: 0.6rem; letter-spacing: 0.3em;
       text-transform: uppercase; color: var(--silver); margin-bottom: 0.75rem;
+      float: none; font-weight: 400;
     }
     .brand-card-name {
       font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 600;
-      color: var(--cream); margin-bottom: 0.5rem;
+      color: var(--cream); margin-bottom: 0.75rem; float: none; line-height: 1.4;
     }
     .brand-card-desc {
-      font-family: 'Jost', sans-serif; font-size: 0.78rem; font-weight: 200;
-      line-height: 1.7; color: rgba(245,242,236,0.7);
+      font-family: 'Jost', sans-serif; font-size: 0.82rem; font-weight: 300;
+      line-height: 1.7; color: rgba(245,242,236,0.85); float: none;
     }
     .brand-card-arrow {
       position: absolute; bottom: 1.5rem; right: 1.5rem;
@@ -321,15 +322,15 @@
   <div class="brand-strip">
     <div class="brand-strip-inner">
       <span class="brand-strip-item"><strong>Parallel Foods, INC.</strong></span>
-      <span class="brand-strip-item">· &nbsp; (ال) SOUQ Drinks</span>
+      <span class="brand-strip-item">· &nbsp; &#x202A;(ال)&#x202C; SOUQ Drinks</span>
       <span class="brand-strip-item">· &nbsp; <strong>Gather. Honor. Discover.</strong></span>
       <span class="brand-strip-item">· &nbsp; MENA-Inspired Food</span>
       <span class="brand-strip-item">· &nbsp; <strong>Parallel Foods, INC.</strong></span>
-      <span class="brand-strip-item">· &nbsp; (ال) SOUQ Drinks</span>
+      <span class="brand-strip-item">· &nbsp; &#x202A;(ال)&#x202C; SOUQ Drinks</span>
       <span class="brand-strip-item">· &nbsp; <strong>Gather. Honor. Discover.</strong></span>
       <span class="brand-strip-item">· &nbsp; MENA-Inspired Food</span>
       <span class="brand-strip-item">· &nbsp; <strong>Parallel Foods, INC.</strong></span>
-      <span class="brand-strip-item">· &nbsp; (ال) SOUQ Drinks</span>
+      <span class="brand-strip-item">· &nbsp; &#x202A;(ال)&#x202C; SOUQ Drinks</span>
       <span class="brand-strip-item">· &nbsp; <strong>Gather. Honor. Discover.</strong></span>
       <span class="brand-strip-item">· &nbsp; MENA-Inspired Food</span>
     </div>
@@ -355,7 +356,7 @@
         <div class="brand-cards reveal">
           <div class="brand-card">
             <p class="brand-card-label">Flagship Brand</p>
-            <p class="brand-card-name">(ال) SOUQ Drinks</p>
+            <p class="brand-card-name">&#x202A;(ال)&#x202C; SOUQ Drinks</p>
             <p class="brand-card-desc">MENA-inspired food and beverages. Royal Mint · Dark Hibiscus · Golden Saffron.</p>
             <span class="brand-card-arrow">↗</span>
           </div>
@@ -378,45 +379,41 @@
         <div style="margin-top: 3rem; display: flex; flex-direction: column; gap: 1.5rem;">
           <div class="contact-info-item">
             <p class="contact-info-label">Inquiries</p>
-            <p class="contact-info-value">hello@parallelfoods.com</p>
+            <p class="contact-info-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="620a070e0e0d22120310030e0e070e040d0d06114c010d0f">[email&#160;protected]</a></p>
           </div>
           <div class="contact-info-item">
             <p class="contact-info-label">Distribution &amp; Wholesale</p>
-            <p class="contact-info-value">trade@parallelfoods.com</p>
+            <p class="contact-info-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b2c6c0d3d6d7f2c2d3c0d3deded7ded4ddddd6c19cd1dddf">[email&#160;protected]</a></p>
           </div>
           <div class="contact-info-item">
-            <p class="contact-info-label">Delaware Corporation</p>
-            <p class="contact-info-value">2810 N Church St PMB 950404<br/>Wilmington, Delaware 19802-4447</p>
-          </div>
-          <div class="contact-info-item">
-            <p class="contact-info-label">California Office</p>
+            <p class="contact-info-label">Headquarters</p>
             <p class="contact-info-value">10880 Wilshire Blvd Suite 1101<br/>Los Angeles, CA 90024</p>
           </div>
         </div>
       </div>
       <div class="reveal">
-        <form class="contact-form" onsubmit="handleSubmit(event)">
+        <form class="contact-form" action="https://formspree.io/f/mwvwnejy" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">First Name</label>
-              <input type="text" class="form-input" placeholder="Your first name" />
+              <input type="text" name="first_name" class="form-input" placeholder="Your first name" />
             </div>
             <div class="form-group">
               <label class="form-label">Last Name</label>
-              <input type="text" class="form-input" placeholder="Your last name" />
+              <input type="text" name="last_name" class="form-input" placeholder="Your last name" />
             </div>
           </div>
           <div class="form-group">
             <label class="form-label">Email</label>
-            <input type="email" class="form-input" placeholder="your@email.com" />
+            <input type="email" name="email" class="form-input" placeholder="your@email.com" />
           </div>
           <div class="form-group">
             <label class="form-label">Phone Number</label>
-            <input type="tel" class="form-input" placeholder="+1 (000) 000-0000" />
+            <input type="tel" name="phone" class="form-input" placeholder="+1 (000) 000-0000" />
           </div>
           <div class="form-group">
             <label class="form-label">Inquiry Type</label>
-            <select class="form-select">
+            <select name="inquiry_type" class="form-select">
               <option value="">Select a topic</option>
               <option>General Inquiry</option>
               <option>Partnership &amp; Investment</option>
@@ -427,8 +424,10 @@
           </div>
           <div class="form-group">
             <label class="form-label">Message</label>
-            <textarea class="form-textarea" placeholder="Tell us about your interest..."></textarea>
+            <textarea name="message" class="form-textarea" placeholder="Tell us about your interest..."></textarea>
           </div>
+          <input type="hidden" name="_replyto" value="info@parallelfoods.com" />
+          <input type="hidden" name="_subject" value="New Inquiry — Parallel Foods" />
           <button type="submit" class="form-submit">Send Message</button>
           <p id="form-success" style="display:none; font-family:'Cormorant Garamond',serif; font-style:italic; color:var(--green); font-size:1rem; margin-top:0.5rem;">Message received. We'll be in touch shortly.</p>
         </form>
@@ -445,7 +444,7 @@
     <p class="footer-right">parallelfoods.com<br/>Los Angeles, CA</p>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 50);
@@ -458,14 +457,4 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => observer.observe(el));
-    function handleSubmit(e) {
-      e.preventDefault();
-      document.getElementById('form-success').style.display = 'block';
-      e.target.querySelector('.form-submit').disabled = true;
-      e.target.querySelector('.form-submit').style.opacity = '0.4';
-    }
-  </script>
-</body>
-</html>
+    }, { 
